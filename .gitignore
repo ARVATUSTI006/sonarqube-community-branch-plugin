@@ -26,3 +26,9 @@
 
 #Claude Code
 .claude/settings.local.json
+
+# please plugin runtime state
+.please/state/
+
+# Per-developer config override (overlays .please/config.yml)
+.please/config.local.yml

@@ -1,3 +1,4 @@
 # Gitignored files copied into new git worktrees (.gitignore syntax).
 # .env is tracked in git, so it is not listed here.
 .claude/settings.local.json
+.please/config.local.yml
