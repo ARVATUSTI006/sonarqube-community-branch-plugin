@@ -1,5 +1,5 @@
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mc1arke_sonarqube-community-branch-plugin&metric=alert_status)](https://sonarcloud.io/dashboard?id=mc1arke_sonarqube-community-branch-plugin)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/mc1arke/sonarqube-community-branch-plugin/.github/workflows/build.yml?branch=master&logo=github)](https://github.com/mc1arke/sonarqube-community-branch-plugin?workflow=build)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=passionfactory-oss_sonarqube-community-branch-plugin&metric=alert_status)](https://sonarcloud.io/dashboard?id=passionfactory-oss_sonarqube-community-branch-plugin)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/passionfactory-oss/sonarqube-community-branch-plugin/build.yml?branch=main&logo=github)](https://github.com/passionfactory-oss/sonarqube-community-branch-plugin/actions/workflows/build.yml?query=branch%3Amain)
 
 # SonarQube Community Branch Plugin
 

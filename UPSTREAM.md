@@ -22,8 +22,9 @@ merge new upstream releases. Update it every time you sync.
 
 Keep this list current. During a sync these are the places where conflicts can appear.
 
-- `README.md` — fork notice block directly below the introduction paragraph. Conflicts if
-  upstream edits the lines around the introduction.
+- `README.md` — the two badges on the first lines point to this repository's SonarCloud project
+  and `build.yml` on `main`, and a fork notice block sits directly below the introduction
+  paragraph. Conflicts if upstream edits the badges or the lines around the introduction.
 - `build.gradle` — test classpath split from upstream PR
   mc1arke/sonarqube-community-branch-plugin#1303 (scanner engine jars after the server libs, to fix
   `ProtobufRuntimeVersionException` in `snapshot (21)`). Applied verbatim; if upstream merges #1303
