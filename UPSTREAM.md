@@ -36,6 +36,8 @@ Keep this list current. During a sync these are the places where conflicts can a
   they do not conflict.
 - `SECURITY.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md` — community health files. New files, so
   they do not conflict.
+- `ARCHITECTURE.md` — codebase map. New file, so it does not conflict; update it when an upstream
+  sync changes the module structure.
 - `CLAUDE.md`, `.please/`, `docs/` — Claude Code instructions and the please workspace (knowledge
   files, tracks, specs, ADRs). New files, so they do not conflict.
 
