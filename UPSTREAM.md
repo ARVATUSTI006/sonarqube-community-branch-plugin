@@ -67,6 +67,8 @@ Keep this list current. During a sync these are the places where conflicts can a
   sync changes the module structure.
 - `CLAUDE.md`, `.please/`, `docs/` — Claude Code instructions and the please workspace (knowledge
   files, tracks, specs, ADRs). New files, so they do not conflict.
+- `.gemini/config.yaml` — Gemini Code Assist PR review settings (draft PRs not reviewed). New
+  file, so it does not conflict.
 
 `LICENSE` is the verbatim LGPL-3.0 text from upstream. Do not edit it.
 
