@@ -11,6 +11,7 @@ Consult these files for project context before exploring the codebase.
 For full file listing with workspace artifacts, use `Skill("please:project-knowledge")`.
 
 ### Project Documents
+- `ARCHITECTURE.md` — Codebase structure, module boundaries, architectural invariants
 - `SECURITY.md` — Security policies, authentication, authorization
 - `CONTRIBUTING.md` — Contribution guide, code review process
 
