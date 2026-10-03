@@ -24,6 +24,10 @@ Keep this list current. During a sync these are the places where conflicts can a
 
 - `README.md` — fork notice block directly below the introduction paragraph. Conflicts if
   upstream edits the lines around the introduction.
+- `build.gradle` — test classpath split from upstream PR
+  mc1arke/sonarqube-community-branch-plugin#1303 (scanner engine jars after the server libs, to fix
+  `ProtobufRuntimeVersionException` in `snapshot (21)`). Applied verbatim; if upstream merges #1303
+  the sync resolves cleanly, otherwise this conflicts when upstream edits the `dependencies` block.
 - `NOTICE` — fork copyright attribution. New file, so it does not conflict.
 - `UPSTREAM.md` — this file. New file, so it does not conflict.
 - `.gitignore` — appended `#Claude Code` and please plugin blocks at the end of the file.
