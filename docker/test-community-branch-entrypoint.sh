@@ -36,6 +36,7 @@ SONARQUBE_HOME="${test_root}" PLUGIN_VERSION="${plugin_version}" \
 
 cmp "${plugin_source}" "${plugin_directory}/${plugin_name}"
 test "$(find "${plugin_directory}" -name 'sonarqube-community-branch-plugin*.jar' | wc -l | tr -d ' ')" = "1"
+test ! -e "${disabled_directory}/${plugin_name}.disabled"
 
 # Both image variants must install the immutable source and use the migration entrypoint.
 for dockerfile in Dockerfile release.Dockerfile; do
