@@ -68,13 +68,13 @@ Keep this list current. During a sync these are the places where conflicts can a
   - `sonarqube-webapp-addons/src/feature-license/entitlements.ts` has the full LGPL license header
     that the other addon files carry.
 
-  A later review fix changed a third file:
+  Review fix commit `95bcfcd` then changed a third file:
   - `docker/test-community-branch-entrypoint.sh` also asserts, after the restart run, that the
     managed plugin jar was not moved to `disabled-plugins`.
 
   If upstream merges both PRs with these commits, only those three files can conflict; keep the
   fork edits. If upstream squashes or rebases the PRs first, expect conflicts in every file listed
-  above; take the upstream version, then re-apply the three edits.
+  above; take the upstream version, then re-apply the edits from `8ed1bef` and `95bcfcd`.
 - `NOTICE` — fork copyright attribution. New file, so it does not conflict.
 - `UPSTREAM.md` — this file. New file, so it does not conflict.
 - `.gitignore` — appended `#Claude Code` and please plugin blocks at the end of the file.
