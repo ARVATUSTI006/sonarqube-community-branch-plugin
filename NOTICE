@@ -1,0 +1,16 @@
+SonarQube Community Branch Plugin (Passion Factory fork)
+
+This project is a fork of mc1arke/sonarqube-community-branch-plugin:
+https://github.com/mc1arke/sonarqube-community-branch-plugin
+
+Copyright (C) 2019-2026 Michael Clarke and contributors
+Modifications Copyright (C) 2026 Passion Factory Corp
+
+Some files contain code derived from SonarQube,
+Copyright (C) 2009-2026 SonarSource SA.
+
+The copyright header in each source file names the holders of that file.
+
+This program is licensed under the GNU Lesser General Public License,
+version 3 or (at your option) any later version. See the LICENSE file
+for the full license text.
