@@ -29,3 +29,22 @@ docs:
   brainstorms: .please/docs/brainstorms
   ideation: .please/docs/ideation
   review: .please/docs/review
+
+# Review plugin settings (/review:setup)
+review:
+  in-house:
+    enabled: true
+  builtin:
+    enabled: true
+  cubic:
+    enabled: true
+    default-flags: "--json -b"
+  agy:
+    enabled: false
+  coderabbit:
+    enabled: false
+  greptile:
+    enabled: false
+  gemini:
+    enabled: true
+    max-reviews-per-pr: 3
