@@ -2,7 +2,7 @@
 
 ## Plugin (Java)
 
-- **Language**: Java. Sources and bytecode target Java 17 (`build.gradle`); CI and local builds use Zulu JDK 21 (`mise.toml`).
+- **Language**: Java. Sources and bytecode target Java 21 (`build.gradle`); CI and local builds use Zulu JDK 21 (`mise.toml`).
 - **Build**: Gradle wrapper (`gradle/wrapper/gradle-wrapper.properties`). Plugins: `jacoco`, `org.sonarqube`, `info.solidsoft.pitest`,
   `com.gradleup.shadow`, `net.researchgate.release`.
 - **SonarQube API**: compiled against the libraries of the SonarQube distribution set by

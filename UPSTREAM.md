@@ -15,7 +15,11 @@ merge new upstream releases. Update it every time you sync.
 
 - Last synced upstream commit: `81c7ae1` (2026-06-01, "Return to SNAPSHOT version post release")
 - Last upstream release included: `26.5.1` (SonarQube 26.5)
-- Version on `main`: `26.6.0-SNAPSHOT`
+- Unmerged upstream PRs merged into the fork: mc1arke/sonarqube-community-branch-plugin#1296 and
+  mc1arke/sonarqube-community-branch-plugin#1298, at head `a68cf75` (SonarQube 26.7, 26.8, and
+  26.9 support; see [Fork-only changes](#fork-only-changes))
+- Targeted SonarQube version: `26.9.0.129388` (webapp submodule at `sqcb-26.9.0`)
+- Version on `main`: `26.9.0-SNAPSHOT`
 - Last checked against upstream: 2026-10-03 (upstream `master` was still at `81c7ae1`)
 
 ## Fork-only changes
@@ -51,6 +55,26 @@ Keep this list current. During a sync these are the places where conflicts can a
 
   New files, so they do not conflict unless upstream merges a different version of them; in that
   case take the upstream version and re-apply the fork modifications.
+- SonarQube 26.7, 26.8, and 26.9 support — upstream PR mc1arke/sonarqube-community-branch-plugin#1298
+  (stacked on mc1arke/sonarqube-community-branch-plugin#1296), merged at head `a68cf75` with a
+  `--no-ff` merge so the 7 upstream commit SHAs are kept. It touches `build.gradle`
+  (`sonarqubeVersion`, Java 17 → 21 compatibility), `gradle.properties`, `.env`, `Dockerfile`,
+  `release.Dockerfile`, `.dockerignore`, `.github/workflows/build.yml`, `docker/`, the
+  `sonarqube-webapp` submodule (`sqcb-26.9.0`), `sonarqube-webapp-addons/`, and
+  `ScannerPullRequestPropertySensorTest.java`. Commit `8ed1bef` then changed two of these files in
+  the fork:
+  - `sonarqube-webapp-addons/setup.sh` resolves `ADDONS_DIR` to an absolute path before changing
+    into the webapp directory, so a relative second argument no longer creates a dangling symlink.
+  - `sonarqube-webapp-addons/src/feature-license/entitlements.ts` has the full LGPL license header
+    that the other addon files carry.
+
+  Review fix commit `95bcfcd` then changed a third file:
+  - `docker/test-community-branch-entrypoint.sh` also asserts, after the restart run, that the
+    managed plugin jar was not moved to `disabled-plugins`.
+
+  If upstream merges both PRs with these commits, only those three files can conflict; keep the
+  fork edits. If upstream squashes or rebases the PRs first, expect conflicts in every file listed
+  above; take the upstream version, then re-apply the edits from `8ed1bef` and `95bcfcd`.
 - `NOTICE` — fork copyright attribution. New file, so it does not conflict.
 - `UPSTREAM.md` — this file. New file, so it does not conflict.
 - `.gitignore` — appended `#Claude Code` and please plugin blocks at the end of the file.
