@@ -26,8 +26,8 @@ Keep this list current. During a sync these are the places where conflicts can a
   upstream edits the lines around the introduction.
 - `NOTICE` — fork copyright attribution. New file, so it does not conflict.
 - `UPSTREAM.md` — this file. New file, so it does not conflict.
-- `.gitignore` — appended a `#Claude Code` block at the end of the file. Conflicts if upstream
-  edits the end of `.gitignore`.
+- `.gitignore` — appended `#Claude Code` and please plugin blocks at the end of the file.
+  Conflicts if upstream edits the end of `.gitignore`.
 - `mise.toml`, `mise.macos-x64.toml`, `mise.lock`, `mise.macos-x64.lock`, `.miserc.toml` — tool
   versions (Zulu 21, Node 22, hk) and tasks. New files, so they do not conflict.
 - `hk.pkl` — git hook configuration (`commit-msg` Conventional Commits check). New file, so it
@@ -36,6 +36,8 @@ Keep this list current. During a sync these are the places where conflicts can a
   they do not conflict.
 - `SECURITY.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md` — community health files. New files, so
   they do not conflict.
+- `CLAUDE.md`, `.please/`, `docs/` — Claude Code instructions and the please workspace (knowledge
+  files, tracks, specs, ADRs). New files, so they do not conflict.
 
 `LICENSE` is the verbatim LGPL-3.0 text from upstream. Do not edit it.
 
