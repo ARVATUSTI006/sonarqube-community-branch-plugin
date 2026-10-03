@@ -5,6 +5,7 @@ set -Eeuo pipefail
 CURRENT_DIR=$(pwd)
 WEBAPP_DIR=${1:-"${CURRENT_DIR}/sonarqube-webapp"}
 ADDONS_DIR=${2:-"${CURRENT_DIR}/sonarqube-webapp-addons"}
+ADDONS_DIR=$(cd "${ADDONS_DIR}" && pwd)
 
 function override_vite_config() {
     if [[ -f ./vite.config.src.ts ]]; then
