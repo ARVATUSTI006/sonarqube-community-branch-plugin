@@ -14,13 +14,8 @@ Community version.
 > Report bugs in the plugin itself to the [upstream repository](https://github.com/mc1arke/sonarqube-community-branch-plugin/issues).
 > Report problems specific to this fork or to Passion Factory's SonarQube setup in this repository.
 >
-> To sync with upstream:
->
-> ```bash
-> git remote add upstream https://github.com/mc1arke/sonarqube-community-branch-plugin.git  # once
-> git fetch upstream
-> git merge upstream/master
-> ```
+> See [Upstream tracking](UPSTREAM.md) for the upstream commit this fork is based on, the fork-only changes,
+> and how to sync with upstream.
 
 # Support
 
