@@ -6,6 +6,22 @@
 A plugin for SonarQube to allow branch analysis and pull request decoration in the
 Community version.
 
+> [!NOTE]
+> This repository is a fork of [mc1arke/sonarqube-community-branch-plugin](https://github.com/mc1arke/sonarqube-community-branch-plugin),
+> maintained by Passion Factory for internal use. It tracks the upstream project, and the rest of this README is
+> upstream documentation: links to releases, Docker images, and issues point to the upstream project.
+>
+> Report bugs in the plugin itself to the [upstream repository](https://github.com/mc1arke/sonarqube-community-branch-plugin/issues).
+> Report problems specific to this fork or to Passion Factory's SonarQube setup in this repository.
+>
+> To sync with upstream:
+>
+> ```bash
+> git remote add upstream https://github.com/mc1arke/sonarqube-community-branch-plugin.git  # once
+> git fetch upstream
+> git merge upstream/master
+> ```
+
 # Support
 
 This plugin is not maintained or supported by SonarSource and has no official upgrade path for migrating from the
