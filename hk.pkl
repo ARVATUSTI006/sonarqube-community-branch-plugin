@@ -1,0 +1,18 @@
+amends "package://github.com/jdx/hk/releases/download/v2.0.1/hk@2.0.1#/Config.pkl"
+
+hooks {
+  ["commit-msg"] {
+    steps {
+      // Conventional Commits, same types as @commitlint/config-conventional.
+      // Merge commits (e.g. upstream sync merges) are skipped; the built-in check rejects them.
+      ["check-conventional-commit"] {
+        check = #"""
+          if head -n 1 "{{commit_msg_file}}" | grep -Eq '^Merge '; then
+            exit 0
+          fi
+          hk util check-conventional-commit "{{commit_msg_file}}"
+          """#
+      }
+    }
+  }
+}

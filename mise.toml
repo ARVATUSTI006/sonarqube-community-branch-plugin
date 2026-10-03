@@ -1,0 +1,27 @@
+# Fork-only toolchain (see UPSTREAM.md). Usage: `mise trust && mise install`.
+# Intel macOS needs the cargo overlay in mise.macos-x64.toml (enabled by .miserc.toml).
+min_version = "2026.6.3"
+
+[tools]
+java = "zulu-21"
+node = "22"
+pkl = "latest"
+"aqua:jdx/hk" = "2.0.1"
+
+[env]
+HK_MISE = 1
+
+[hooks]
+postinstall = "hk install --mise"
+
+[tasks.build]
+description = "Build the plugin"
+run = "./gradlew build"
+
+[tasks.test]
+description = "Run the unit tests"
+run = "./gradlew test"
+
+[tasks.check]
+description = "Run all hk checks against every file"
+run = "hk check --all"

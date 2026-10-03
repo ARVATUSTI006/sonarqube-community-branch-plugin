@@ -1,0 +1,2 @@
+# Load mise.{os}-{arch}.toml overlays automatically.
+auto_env = true

@@ -1,0 +1,4 @@
+# Intel macOS overlay: the aqua hk package has no darwin-amd64 binary, so build from source.
+[tools]
+"aqua:jdx/hk" = { version = "2.0.1", os = ["linux"] }
+"cargo:hk" = "2.0.1"
