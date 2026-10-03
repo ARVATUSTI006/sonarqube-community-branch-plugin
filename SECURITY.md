@@ -18,7 +18,11 @@ Security fixes are provided for the latest release on the `main` branch only.
 **Please do not report security vulnerabilities through public GitHub issues,
 discussions, or pull requests.**
 
-Email **security@passionfactory.ai** instead.
+Report it privately through
+[GitHub private vulnerability reporting](https://github.com/passionfactory-oss/sonarqube-community-branch-plugin/security/advisories/new):
+open the **Security** tab and select **Report a vulnerability**.
+
+If you can't use GitHub, email **security@passionfactory.ai** instead.
 
 Please include:
 
