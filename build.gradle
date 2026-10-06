@@ -69,7 +69,7 @@ dependencies {
     // classes (e.g. DbIssues) fail with ProtobufRuntimeVersionException depending on file ordering.
     testImplementation(fileTree(dir: sonarLibraries, include: '**/*.jar', exclude: ['extensions/*.jar', 'scanner/*.jar']))
     testImplementation(fileTree(dir: "${sonarLibraries}/scanner", include: '*.jar'))
-    testImplementation('org.mockito:mockito-core:5.23.0')
+    testImplementation('org.mockito:mockito-core:5.24.0')
     testImplementation('org.assertj:assertj-core:3.27.7')
     testImplementation('org.wiremock:wiremock:3.13.2')
     zip("sonarqube:sonarqube:${sonarqubeVersion}@zip")
