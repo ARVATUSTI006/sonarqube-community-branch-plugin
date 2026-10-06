@@ -32,6 +32,6 @@
 ## CI and tooling
 
 - GitHub Actions: `build.yml` (snapshot build, webapp build, release, SonarCloud analysis when
-  `SONAR_TOKEN` is set) and `codeql-analysis.yml`.
+  `SONAR_TOKEN` is set); GitHub's default setup runs CodeQL analysis.
 - mise pins Java, Node, pkl, and hk; hk runs the `commit-msg` Conventional Commits check.
 - Dependabot updates Gradle and GitHub Actions dependencies.

@@ -55,6 +55,10 @@ Keep this list current. During a sync these are the places where conflicts can a
 
   New files, so they do not conflict unless upstream merges a different version of them; in that
   case take the upstream version and re-apply the fork modifications.
+- `.github/workflows/codeql-analysis.yml` — removed the upstream advanced CodeQL workflow because
+  this repository uses GitHub's default CodeQL setup. Running both configurations fails when
+  GitHub rejects the advanced workflow's SARIF upload. Keep the workflow removed while default
+  setup is enabled; restoring it requires disabling default setup first.
 - SonarQube 26.7, 26.8, and 26.9 support — upstream PR mc1arke/sonarqube-community-branch-plugin#1298
   (stacked on mc1arke/sonarqube-community-branch-plugin#1296), merged at head `a68cf75` with a
   `--no-ff` merge so the 7 upstream commit SHAs are kept. It touches `build.gradle`
